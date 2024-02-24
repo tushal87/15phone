@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Calculator-Iphone Clone</title>
 </head>
 <link rel="stylesheet" href="stylesheet.css">
 <body>
     <div class="main">
-        <input type="text" class="txt" id="txt" readonly>
+        <input type="text" class="txt" id="txt" placeholder="Enter Number">
         <div class="numbers" id="numbers">
             <button onclick="appendToDisplay('1')" class="grey-c">1</button>
             <button onclick="appendToDisplay('2')"class="grey-c">2</button>
@@ -25,7 +25,7 @@
             <button onclick="appendToDisplay('*')">*</button>
             <button onclick="appendToDisplay('/')">/</button>
             <button onclick="cal()">=</button>
-            <button onclick="clear()" class="yellow" id="yellow">C</button>
+            <button onclick="clearDisplay()" class="yellow" id="yellow">C</button>
         </div>
         
     </div>    
@@ -36,9 +36,8 @@
     function appendToDisplay(input){
         display.value += input;
     }
-    function clear(){
-       display.value="";
-       
+    function clearDisplay(){
+        document.getElementById("txt").value ="";
     }
     function cal(){
         display.value=eval(display.value);
