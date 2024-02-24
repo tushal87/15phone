@@ -60,3 +60,15 @@ button:active{
     color: white;
 
 }
+@media screen and (max-width: 320px) {
+    .main{
+        width: 227px;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    .main{
+        width:227px ;
+    }
+    
+}
